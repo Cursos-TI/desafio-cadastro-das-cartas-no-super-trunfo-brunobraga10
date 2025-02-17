@@ -8,20 +8,30 @@ typedef struct cartastrunfo
     char nome[50];
     int populacao;
     float area;
-    double PIB;
+    double pib;
     int pontosTuristicos;
+    double DensidadePopulacional;
+    double pibperCapita;
 } cartastrunfo;
 
 // Função para exibir informações de uma carta
-void exibircarta(cartastrunfo carta)
+void exibircarta(cartastrunfo carta)https://github.com/Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-brunobraga10/security
 {
+   carta.densidadepopulacional = (float)carta.populacao / carta.area;
+   carta.pibpercapita = (float) carta.pib / carta.populacao;
+
+    
     printf("------ Dados da Carta -------\n");
     printf("Codigo da cidade: %c%02d\n", carta.codigoEstado, carta.numeroCidade);
     printf("Nome da cidade: %s\n", carta.nome);
     printf("Populacao da cidade: %d\n", carta.populacao);
     printf("Area da cidade: %.2f km²\n", carta.area);
-    printf("PIB da cidade: R$ %.2f bilhoes\n", carta.PIB);
+    printf("PIB da cidade: R$ %.2f bilhoes\n", carta.pib);
     printf("Pontos turisticos: %d\n", carta.pontosTuristicos);
+    printf("densidade populacional: %.2f \n", carta.densidadepopulacionas);
+     printf("PIBperCapita: %.2f \n", carta.PIBperCapita);
+
+    float = (float) populacao / 
 }
 
 int main()

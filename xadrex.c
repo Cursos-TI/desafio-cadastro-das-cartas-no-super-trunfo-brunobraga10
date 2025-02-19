@@ -11,13 +11,15 @@ int populacao;
 float area;
 double pib;
 int pontosTuristicos;
-double DensidadePopulacional;
-double pibperCapita;
+
 
 
 printf("***cidade A01***: \n");
 
+printf("codigo da cidade: \n");
+scanf("%d",&codigoestado);
 
+};
 
 
 

@@ -10,6 +10,11 @@ int populacao;
 float area;
 double pib;
 int pontosTuristicos;
+double densidadepopulacional;
+double pibpercapita;
+
+densidadepopulacional = (double) populacao / area;
+pibpercapita = (double) pib / populacao;
 
 // Carta 1
 printf("***CIDADE 1***: \n");

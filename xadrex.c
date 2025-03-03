@@ -3,108 +3,135 @@
 int main() {
 
 // Variaveis
-char codigoEstado;  // A, B, C, ..., H
-int numeroCidade;   // 1, 2, 3, 4
-char nome[50];
-int populacao;
-float area;
-double pib;
-int pontosTuristicos;
-double densidadepopulacional;
-double pibpercapita;
+char codigoEstado1,codigoestado2;  // A, B, C, ..., H
+int numeroCidade1, numerocidade2;   // 1, 2, 3, 4
+char nome1[50],nome2[50];
+unsigned long int populacao1,populacao2;
+float area1,area2;
+double pib1,pib2;
+int pontosTuristicos1,pontosTuristico2;
+double densidadepopulacional1,densidadepopulacional2;
+double pibpercapita1,pibpercapita2;
+float superpoder1,superpoder2;
 
-densidadepopulacional = (double) populacao / area;
-pibpercapita = (double) pib / populacao;
+
 
 // Carta 1
-printf("***CIDADE 1***: \n");
+printf("***carta 1*** \n");
 
-// Codigo da cidade A01
+// Codigo da carta 1
 printf("Digite o codigo da cidade (A, B, C, ..., H): \n");
-scanf(" %c", &codigoEstado); 
-printf("Codigo da cidade: %c \n", codigoEstado);
+scanf(" %c", &codigoEstado1); 
+printf("Codigo da cidade: %c \n", codigoEstado1);
 
-// Numero da cidade A01
+// Numero da carta 1
 printf("Digite o numero da cidade (1, 2, 3, 4): \n");
-scanf("%d", &numeroCidade);
-printf("Numero da cidade: %d \n", numeroCidade);
+scanf("%d", &numeroCidade1);
+printf("Numero da cidade: %d \n", numeroCidade1);
 
-// Nome da cidade A01
+// Nome da carta 1
 printf("Digite o nome da cidade: \n");
-scanf("%s", nome);
-printf("Nome da cidade: %s \n", nome);
+scanf("%s", nome1);
+printf("Nome da cidade: %s \n", nome1);
 
-// Populacao da cidade A01
+// Populacao da carta 1
 printf("Digite a populacao da cidade: \n");
-scanf("%d", &populacao);
-printf("Populacao da cidade: %d habitantes \n", populacao);
+scanf("%d", &populacao1);
+printf("Populacao da cidade: %d habitantes \n", populacao1);
 
-// Area da cidade A01
+// Area da carta 1
 printf("Area da cidade (em km²): \n");
-scanf("%f", &area);
-printf("Area da cidade: %.2f km² \n", area);
+scanf("%f", &area1);
+printf("Area da cidade: %.2f km² \n", area1);
 
-// PIB da cidade A01
+// PIB da carta 1
 printf("PIB da cidade (em bilhoes): \n");
-scanf("%lf", &pib);
-printf("PIB da cidade: %.2lf bilhoes \n", pib);
+scanf("%lf", &pib1);
+printf("PIB da cidade: %.2lf bilhoes \n", pib1);
 
-// Pontos turisticos da cidade A01
+// Pontos turisticos da carta 1
 printf("Pontos turisticos da cidade: \n");
-scanf("%d", &pontosTuristicos);
-printf("Pontos turisticos da cidade: %d \n", pontosTuristicos);
+scanf("%d", &pontosTuristicos1);
+printf("Pontos turisticos da cidade: %d \n", pontosTuristicos1);
+
+// divisão densidade populacional e pibpercapita carta 1
+
+densidadepopulacional1 = (double) populacao1 / area1;
+pibpercapita1 = (double) (pib1 * 1e9) / populacao1; // 1e9= converte pib para bilhoes
+
+printf("densidade populacional cidade A01: %.2lf habitantes por km \n", densidadepopulacional1);
+printf("pib per capita cidade A01: %.2lf bilhoes por habitante \n",pibpercapita1);
+
+// calculo do super poder da carta 1
+superpoder1 = (float)populacao1 + area1 + (pib1 * 1e9) +pontosTuristicos1 + (1.0/ densidadepopulacional1);
 
 // Carta 2
-printf("***CIDADE 2***: \n");
+printf("***carta 2***: \n");
 
-// Codigo da cidade A02
+
+// Codigo da carta 2
 printf("Digite o codigo da cidade (A, B, C, ..., H): \n");
-scanf(" %c", &codigoEstado); 
-printf("Codigo da cidade: %c \n", codigoEstado);
+scanf(" %c", &codigoestado2); 
+printf("Codigo da cidade: %c \n", codigoestado2);
 
-// Numero da cidade A02
+// Numero da carta 2
 printf("Digite o numero da cidade (1, 2, 3, 4): \n");
-scanf("%d", &numeroCidade);
-printf("Numero da cidade: %d \n", numeroCidade);
+scanf("%d", &numerocidade2);
+printf("Numero da cidade: %d \n", numerocidade2);
 
-// Nome da cidade A02
+// Nome da carta 2
 printf("Digite o nome da cidade: \n");
-scanf("%s", nome);
-printf("Nome da cidade: %s \n", nome);
+scanf("%s", nome2);
+printf("Nome da cidade: %s \n", nome2);
 
-// Populacao da cidade A02
+// Populacao da carta 2
 printf("Digite a populacao da cidade: \n");
-scanf("%d", &populacao);
-printf("Populacao da cidade: %d habitantes \n", populacao);
+scanf("%d", &populacao2);
+printf("Populacao da cidade: %d habitantes \n", populacao2);
 
-// Area da cidade A02
+// Area da carta 2
 printf("Area da cidade (em km²): \n");
-scanf("%f", &area); 
-printf("Area da cidade: %.2f km² \n", area);
+scanf("%f", &area2); 
+printf("Area da cidade: %.2f km² \n", area2);
 
-// PIB da cidade A02
+// PIB da carta 2
 printf("PIB da cidade (em bilhoes): \n");
-scanf("%lf", &pib);
-printf("PIB da cidade: %.2lf bilhoes \n", pib);
+scanf("%lf", &pib2);
+printf("PIB da cidade: %.2lf bilhoes \n", pib2);
 
-// Pontos turisticos da cidade A02
+// Pontos turisticos da carta 2
 printf("Pontos turisticos da cidade: \n");
-scanf("%d", &pontosTuristicos);
-printf("Pontos turisticos da cidade: %d \n", pontosTuristicos);
+scanf("%d", &pontosTuristico2);
+printf("Pontos turisticos da cidade: %d \n", pontosTuristico2);
+
+//divisão da densidade populacional e pibpercapita da carta 2
+densidadepopulacional2 = (double) populacao2 / area2;
+pibpercapita2 = (double) pib2 / populacao2;
+
+printf("densidade populacional cidade A02: %.2lf habitantes por km \n ", densidadepopulacional2);
+printf("pib per capita cidade A02: %.2lf bilhoes \n ",pibpercapita2);
+
+// calculo do super poder da carta 2
+superpoder2 = (float)populacao2 + area2 + (pib2 * 1e9) + pontosTuristico2 + (1.0/ densidadepopulacional2);
+
+// comparaçoes das cartas ("1"para verdadeiro e "0" para falso)
+
+printf("comparação das cartas");
+
+printf("população: carta 1 vence carta 2 \n", populacao1 > populacao2);
+
+printf("area: carta 1 vence carta 2", area1 > area2);
+
+printf("pib: carta 1 vence carta 2",pib1 > pib2);
+
+printf("pontos turisticos: carta 1 vence carta 2", pontosTuristicos1 > pontosTuristico2);
+
+printf("densidade populacional: carta 1 vence carta 2",densidadepopulacional1 > densidadepopulacional2);
+
+printf("pibpercapita: carta 1 vence carta 2", pibpercapita1 > pibpercapita2);
+
+printf("superpoder:carta 1 vence carta 2", superpoder1 > superpoder2);
+
 
 return 0;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-

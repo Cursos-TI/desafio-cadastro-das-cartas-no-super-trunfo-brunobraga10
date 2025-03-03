@@ -36,8 +36,8 @@ printf("Nome da cidade: %s \n", nome1);
 
 // Populacao da carta 1
 printf("Digite a populacao da cidade: \n");
-scanf("%d", &populacao1);
-printf("Populacao da cidade: %d habitantes \n", populacao1);
+scanf("%lu", &populacao1);
+printf("Populacao da cidade: %lu habitantes \n", populacao1);
 
 // Area da carta 1
 printf("Area da cidade (em km²): \n");
@@ -86,8 +86,8 @@ printf("Nome da cidade: %s \n", nome2);
 
 // Populacao da carta 2
 printf("Digite a populacao da cidade: \n");
-scanf("%d", &populacao2);
-printf("Populacao da cidade: %d habitantes \n", populacao2);
+scanf("%lu", &populacao2);
+printf("Populacao da cidade: %lu habitantes \n", populacao2);
 
 // Area da carta 2
 printf("Area da cidade (em km²): \n");
@@ -118,19 +118,19 @@ superpoder2 = (float)populacao2 + area2 + (pib2 * 1e9) + pontosTuristico2 + (1.0
 
 printf("comparação das cartas");
 
-printf("população: carta 1 vence carta 2 \n", populacao1 > populacao2);
+printf("população: carta 1 vence carta 2 %d \n", (populacao1 > populacao2) );
 
-printf("area: carta 1 vence carta 2", area1 > area2);
+printf("area: carta 1 vence carta 2 %d \n", (area1 > area2) );
 
-printf("pib: carta 1 vence carta 2",pib1 > pib2);
+printf("pib: carta 1 vence carta 2 %d \n", (pib1 > pib2) );
 
-printf("pontos turisticos: carta 1 vence carta 2", pontosTuristicos1 > pontosTuristico2);
+printf("pontos turisticos: carta 1 vence carta 2 %d \n", (pontosTuristicos1 > pontosTuristico2) );
 
-printf("densidade populacional: carta 1 vence carta 2",densidadepopulacional1 > densidadepopulacional2);
+printf("densidade populacional: carta 1 vence carta 2 %d \n", (densidadepopulacional1 > densidadepopulacional2) );
 
-printf("pibpercapita: carta 1 vence carta 2", pibpercapita1 > pibpercapita2);
+printf("pibpercapita: carta 1 vence carta 2 %d \n", (pibpercapita1 > pibpercapita2) );
 
-printf("superpoder:carta 1 vence carta 2", superpoder1 > superpoder2);
+printf("superpoder:carta 1 vence carta 2 %d \n", (superpoder1 > superpoder2) );
 
 
 return 0;
